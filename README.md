@@ -144,4 +144,8 @@ If you go back to the `edit` page and submit the form, the record will be update
 
 Nice work! You now know how to integrate multiple form helpers into a Rails application, and you should have a good idea on when to properly use `form_for` vs. `form_tag`.
 
+## Does this need an update?
+
+Please open a [GitHub issue](https://github.com/learn-co-curriculum/phrg-rails-form_for-on-edit-readme/issues) or [pull-request](https://github.com/learn-co-curriculum/phrg-rails-form_for-on-edit-readme/pulls). Provide a detailed description that explains the issue you have found or the change you are proposing. Then "@" mention your instructor on the issue or pull-request, and send them a link via Connect.
+
 <p data-visibility='hidden'>PHRG `form_for` on Edit</p>
