@@ -2,11 +2,9 @@
 
 If you know how to utilize the `form_tag` method for creating forms in Rails you may wonder why you need to learn a new form building process. Let's imagine that you've been tasked with creating the world's first pet hamster social network, and one of the requirements is that the hamster profile page needs to have about 100 different form fields that can be edited. If you are using the `form_tag` method, your application will be technically resubmitting all 100 fields each time you edit the data. Your form view templates will also have 100 calls to the `@hamster` instance variable and each of the hamster attributes. Thankfully `form_for` is here and will help clean up the form view template and provide some additional benefits that we'll explore in this lesson.
 
-
 ## Recap of `form_tag`
 
 To review, the `form_tag` helper method allows us to automatically generate HTML form code and integrate data to both auto fill the values as well as have the form submit data that the controller can use to either create or update a record in the database. It allows for you to pass in: the route for where the parameters for the form will be sent, the HTTP method that the form will utilize, and the attributes for each field.
-
 
 ## Issues with using `form_tag`
 
@@ -17,7 +15,6 @@ Before we get into the benefits and features of the `form_for` method, let's fir
 * The form has no knowledge of the form's goal; it doesn't know if the form is meant to create or update a record
 
 * You're forced to have duplicate code throughout the form; it's hard to adhere to DRY principles when utilizing the `form_tag`
-
 
 ## Difference between `form_for` and `form_tag`
 
@@ -52,7 +49,7 @@ Let's take the `edit` form that utilized the `form_tag` that we built before for
 
   <label>Post description</label><br>
   <%= text_area_tag :description, @post.description %><br>
-  
+
   <%= submit_tag "Submit Post" %>
 <% end %>
 ```
@@ -90,7 +87,7 @@ Our new form will look something like this:
 
   <label>Post description</label><br>
   <%= f.text_area :description %><br>
-  
+
   <%= f.submit %>
 <% end %>
 ```
@@ -139,7 +136,6 @@ Notice how the `title` and `description` attributes are now nested within the `p
 
 If you go back to the `edit` page and submit the form, the record will be updated in the database successfully.
 
-
 ## Summary
 
 Nice work! You now know how to integrate multiple form helpers into a Rails application, and you should have a good idea on when to properly use `form_for` vs. `form_tag`.
@@ -147,5 +143,3 @@ Nice work! You now know how to integrate multiple form helpers into a Rails appl
 ## Does this need an update?
 
 Please open a [GitHub issue](https://github.com/learn-co-curriculum/phrg-rails-form_for-on-edit-readme/issues) or [pull-request](https://github.com/learn-co-curriculum/phrg-rails-form_for-on-edit-readme/pulls). Provide a detailed description that explains the issue you have found or the change you are proposing. Then "@" mention your instructor on the issue or pull-request, and send them a link via Connect.
-
-<p data-visibility='hidden'>PHRG `form_for` on Edit</p>
